@@ -1,5 +1,5 @@
 provider "aws" {
-    region = "eu-west-2"
+    region = "us-east-1"
 }
 
 variable "ingressrules" {
@@ -13,8 +13,8 @@ variable "egressrules" {
 }
 
 resource "aws_instance" "ec2" {
-    ami = "ami-032598fcc7e9d1c7a"
-    instance_type = "t2.micro"
+    ami = "ami-098e39bafa7e7303d"
+    instance_type = "t3.micro"
     security_groups = [aws_security_group.webtraffic.name]
 }
 
